@@ -73,11 +73,11 @@ nav ul li a:hover {
 section {
   padding: 50px 20px;
   background-color: #f4f4f4;
+  height: 100vh;
 }
 
 #about, #projects, #achievement, #contact {
   background-color: #f4f4f4;
-  margin-top: 50px;
 }
 
 #about h2, #projects h2, #achievement h2, #contact h2, .half-screen h2 {
