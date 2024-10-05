@@ -1,35 +1,118 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #FF4F4F;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FF4F4F;
+  color: white;
+}
+
+.laptop {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen span {
+  display: block;
+  font-size: 24px;
+  color: white;
+}
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project a {
+  text-decoration: none;
+  color: #FF4F4F;
+  font-weight: bold;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FF4F4F;
+  color: white;
+}
+
+#contact a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    flex-direction: column;
   }
-  
-  section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
+
+  .hero {
+    flex-direction: column;
   }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  .project {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  } 
+}
