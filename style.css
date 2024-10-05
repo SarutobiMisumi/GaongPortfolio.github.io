@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #FF4F4F;
-  color: #333;
+  background-color: #c0a22a;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 /* Header */
 header {
   position: fixed;
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #f3f1cf;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -69,12 +69,22 @@ nav ul li a:hover {
   color: white;
 }
 
-/* Projects Section */
-#projects {
+/* Sections */
+section {
   padding: 50px 20px;
   background-color: #f4f4f4;
 }
 
+#about, #projects, #achievement, #contact {
+  background-color: #f4f4f4;
+  margin-top: 50px;
+}
+
+#about h2, #projects h2, #achievement h2, #contact h2, .half-screen h2 {
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
 .project {
   margin-bottom: 20px;
   padding: 15px;
@@ -93,9 +103,18 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+/* Half Screen Section */
+.half-screen {
+  height: 50vh; /* Makes the section half of the viewport height */
+  background-color: #FF4F4F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Contact Section */
 #contact {
-  padding: 50px 20px;
   text-align: center;
   background-color: #FF4F4F;
   color: white;
