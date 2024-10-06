@@ -94,10 +94,10 @@ body.dark-theme .hero {
 /* Retro Computer Design */
 .retro-computer {
   position: relative;
-  width: 350px;
+  width: 300px; /* Adjusted width to better match the retro design */
   height: 250px;
-  background-color: #333;
-  border-radius: 15px;
+  background-color: #857f7f; /* Light gray color similar to the retro look */
+  border-radius: 10px; /* Rounded corners to match the style */
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -107,14 +107,13 @@ body.dark-theme .hero {
 
 .screen {
   position: absolute;
-  width: 320px;
-  height: 180px;
-  background-color: #000;
-  border-radius: 10px;
+  width: 220px; /* Reduced width for a more square, retro-like screen */
+  height: 140px;
+  background-color: #2a3135; /* Blue color for the screen similar to the reference image */
+  border-radius: 5px; /* Slight rounding for the screen corners */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   text-align: center;
   color: #0f0;
 }
@@ -225,4 +224,33 @@ header.scrolled {
   background-color: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
   transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.base {
+  position: absolute;
+  bottom: -30px; /* Adjusted to give the appearance of the computer base */
+  width: 240px;
+  height: 40px;
+  background-color: #a8a6a6;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floppy-drive {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 50px;
+  height: 10px;
+  background-color: #3a3939;
+}
+
+.icon {
+  position: absolute;
+  bottom: 15px;
+  left: 80px;
+  width: 20px;
+  height: 15px;
+  background-color: #77b255;
+  border-radius: 3px;
 }
