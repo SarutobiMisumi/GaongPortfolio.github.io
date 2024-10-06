@@ -221,8 +221,8 @@ body.dark-theme #theme-toggle {
 
 /* Header Scroll Effect */
 header.scrolled {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
+  background-color: rgba(127, 124, 124, 0.8); /* Darker background when scrolled */
+  box-shadow: 0 4px 10px rgba(141, 140, 140, 0.2); /* Add shadow when scrolled */
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
