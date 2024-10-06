@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function typeNewMessage() {
-      const messages = ["Welcome", "To", "Gaong Gaong Portfolio"];
+      const messages = ["Welcome", "To", "Gaong Gaong", "Portfolio"];
       let messageIndex = 0;
 
       function typeLine() {
