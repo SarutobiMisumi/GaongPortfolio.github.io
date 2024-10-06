@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #fafafa;
+  background-color: #f0f0f0; /* Light gray for light mode */
   color: #333;
   scroll-behavior: smooth;
   transition: background-color 0.5s, color 0.5s;
@@ -15,8 +15,8 @@ body {
 
 /* Dark Theme */
 body.dark-theme {
-  background-color: #1e1e1e;
-  color: #fafafa;
+  background-color: #121212; /* Dark gray background for dark mode */
+  color: #e0e0e0; /* Light gray text for contrast */
 }
 
 /* Header */
@@ -24,7 +24,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95); /* Light gray for header background in light mode */
   padding: 10px 0;
   display: flex;
   justify-content: center;
@@ -36,8 +36,8 @@ header {
 
 /* Dark Theme Header */
 header.dark-theme {
-  background-color: rgba(30, 30, 30, 0.9); /* Dark background for header */
-  color: #fafafa;
+  background-color: rgba(18, 18, 18, 0.95); /* Dark gray for header background */
+  color: #e0e0e0; /* Light gray text */
 }
 
 /* Navigation Links */
@@ -57,28 +57,33 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ff4f4f;
+  color: #ff4f4f; /* Red hover effect for both modes */
 }
 
 /* Dark Theme Navigation Links */
 body.dark-theme nav ul li a {
-  color: #fafafa;
+  color: #e0e0e0;
 }
 
 body.dark-theme nav ul li a:hover {
-  color: #ff884f;
+  color: #ff884f; /* Slightly lighter red hover effect for dark mode */
 }
 
 /* Hero Section */
 .hero {
   display: flex;
+  flex-direction: column; /* Stack the computer and text vertically */
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ff4f4f 0%, #ff884f 100%);
-  color: white;
+  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+  color: #333;
   text-align: center;
-  flex-direction: column;
+}
+
+body.dark-theme .hero {
+  background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%); /* Dark gradient for dark mode */
+  color: #e0e0e0;
 }
 
 .hero h1 {
@@ -86,8 +91,49 @@ body.dark-theme nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2em;
+/* Retro Computer Design */
+.retro-computer {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.screen {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: #0f0;
+}
+
+.screen .text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #0f0; /* Green text for retro feel */
+  overflow: hidden;
+  border-right: .15em solid #0f0; /* Cursor effect */
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframe animations for typing effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #0f0; }
 }
 
 /* Sections */
@@ -98,17 +144,17 @@ section {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 #about, #projects, #achievement {
-  background-color: #f9f9f9;
+  background-color: #fafafa; /* Light background for sections in light mode */
 }
 
-/* Dark Theme for Sections */
 body.dark-theme #about,
 body.dark-theme #projects,
 body.dark-theme #achievement {
-  background-color: #2c2c2c;
+  background-color: #1e1e1e; /* Dark background for sections in dark mode */
 }
 
 .box {
@@ -118,7 +164,7 @@ body.dark-theme #achievement {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.5s, color 0.5s;
 }
 
 .box:hover {
@@ -128,7 +174,21 @@ body.dark-theme #achievement {
 /* Dark Theme for Box */
 body.dark-theme .box {
   background-color: #333;
-  color: #fafafa;
+  color: #e0e0e0;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fafafa; /* Light background */
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-theme #contact {
+  background-color: #1e1e1e; /* Dark background for contact section */
+  color: #e0e0e0;
 }
 
 /* Theme Toggle Button */
@@ -139,8 +199,8 @@ body.dark-theme .box {
   background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 50%; /* Rounded edges */
-  padding: 5px;
+  border-radius: 50%;
+  padding: 10px;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -152,7 +212,7 @@ body.dark-theme .box {
 }
 
 body.dark-theme #theme-toggle {
-  background-color: #fafafa; /* Light button for dark theme */
+  background-color: #fafafa;
   color: #333;
 }
 
@@ -160,6 +220,9 @@ body.dark-theme #theme-toggle {
   background-color: #ff4f4f; /* Hover effect */
 }
 
-#contact h2{
-  color: aqua;
+/* Header Scroll Effect */
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }

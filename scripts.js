@@ -33,3 +33,62 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const textElement = document.querySelector('.screen .text');
+
+  if (textElement) {
+    // Type "Hello World" with a typing effect
+    let textToType = "Hello World";
+    let index = 0;
+
+    function typeText() {
+      if (index < textToType.length) {
+        textElement.textContent += textToType[index];
+        index++;
+        setTimeout(typeText, 150); // Speed of typing effect
+      } else {
+        // Wait before starting the deletion
+        setTimeout(deleteText, 1000);
+      }
+    }
+
+    function deleteText() {
+      if (index > 0) {
+        textElement.textContent = textToType.substring(0, index - 1);
+        index--;
+        setTimeout(deleteText, 100); // Speed of deleting effect
+      } else {
+        // After deleting, type the new message
+        setTimeout(typeNewMessage, 500);
+      }
+    }
+
+    function typeNewMessage() {
+      const messages = ["Welcome", "To", "My Portfolio"];
+      let messageIndex = 0;
+
+      function typeLine() {
+        if (messageIndex < messages.length) {
+          textElement.innerHTML += messages[messageIndex] + "<br>";
+          messageIndex++;
+          setTimeout(typeLine, 500); // Speed of typing each line
+        } else {
+          // Wait before starting over
+          setTimeout(() => {
+            textElement.innerHTML = "";
+            index = 0;
+            typeText();
+          }, 1000);
+        }
+      }
+
+      typeLine();
+    }
+
+    // Start typing "Hello World"
+    typeText();
+  } else {
+    console.error("Text element not found. Check the selector and make sure the HTML structure matches.");
+  }
+});
